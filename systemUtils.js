@@ -55,7 +55,7 @@ const updateRelatedCells = (index, systemState) => {
         for (let cellIndex of currentRelatedCells) {
             const value = computeFormula(newSystemState[cellIndex].formula, newSystemState)
             newSystemState = changeValueByIndex(cellIndex, value, newSystemState)
-            console.log(`Cell #${cellIndex} changed to ${newSystemState[index].value}`)
+            console.log(`Cell #${cellIndex} changed to ${newSystemState[cellIndex].value}`)
         }
     }
 

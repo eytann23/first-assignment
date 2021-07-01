@@ -45,7 +45,7 @@ const systemInit = (inputFile) => {
 const cleanSpacesFromFormulaInput = (userInput) => {
     if (!userInput.includes('=')) return userInput;
     const cleanFormula = userInput.split(' ').slice(2).join('')
-    console.log(userInput.split(' ').slice(0, 2).join(' ') + ' ' + cleanFormula)
+
     const newUserInput = userInput.split(' ').slice(0, 2).join(' ') + ' ' + cleanFormula
     return newUserInput;
 }
@@ -57,7 +57,6 @@ const userSession = async (systemState) => {
     switch (userInput) {
         case 'a':
             printSystemState(systemState)
-            console.log(systemState)
             break;
         case (userInput.match(regexpUpdate) || {}).input:
             const { index, value } = convertUserInputIntoChangeDetails(userInput)
