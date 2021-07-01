@@ -5,7 +5,6 @@ const main = async (inputFile) => {
         let systemState = systemInit(inputFile)
         while (true) {
             systemState = await userSession(systemState)
-            console.log(systemState)
         }
     } catch (error) {
         console.log(error.message)

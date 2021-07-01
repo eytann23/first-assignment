@@ -139,8 +139,6 @@ const processUpdateInput = (index, value, systemState) => {
     } else {
         newSystemState = addNewCell(value, index, systemState)
         newSystemState = changeValueByIndex(index, value, newSystemState)
-        // newSystemState[index].value = computeFormula(newSystemState[index].formula, newSystemState)
-        // newSystemState = updateRelatedCells(index, newSystemState)
     }
     console.log(`Cell #${index} changed to ${newSystemState[index].value}`)
 
